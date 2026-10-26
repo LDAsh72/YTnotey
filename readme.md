@@ -44,15 +44,5 @@ allowing hidden background functionality.
 .
 .
 
-___________________________________________________________________
-(C)2026 - LDAsh (Violation Entertainment)
- webpage: https://www.violae.net/ytnotey
- project: https://github.com/LDAsh72
-  e-mail: ld_ash@violae.net
-------------------------------------------------
-.
-.
-.
-
 
 
