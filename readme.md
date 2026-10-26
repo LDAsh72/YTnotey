@@ -4,7 +4,9 @@ ___________________________________________________________________
 ![YTnotey](https://www.violae.net/ytnotey/YTnotey.jpg)
 
 ( DOWNLOAD ('setup') v1.0 )
+
 https://www.violae.net/ytnotey/YTnotey_v1.0_setup.zip
+
 ___________________________________________________________________
 
    'never miss another stream again...'
@@ -16,9 +18,13 @@ no late notifications - and highly configurable.
 Edit the INI to setup which channels to track.
  such as...
 url1=https://www.youtube.com/@RetroCreep
+
 url2=https://www.youtube.com/@ReviewTechUSARTU
+
 url3=https://www.youtube.com/@BenHeckHacks
+
 url4=https://www.youtube.com/@Jayhooft
+
 ...etc.
 
 ------------------------------------------------
@@ -36,7 +42,7 @@ allowing hidden background functionality.
 .
 .
 
-------------------------------------------------
+___________________________________________________________________
 (C)2026 - LDAsh (Violation Entertainment)
  webpage: https://www.violae.net/ytnotey
  project: https://github.com/LDAsh72
