@@ -42,6 +42,7 @@ A tray utility governs options and features
 allowing hidden background functionality.
 
 ![YTnotey-](https://www.violae.net/ytnotey/YTnotey_a_.jpg)
+
 readme for more info - https://www.violae.net/ytnotey/YTnoteyreadme.txt
 
 .
