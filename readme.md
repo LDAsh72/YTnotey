@@ -40,9 +40,29 @@ comparing the "videoId" against the previous
 samples retrieved and alerting on a mismatch.
 A tray utility governs options and features
 allowing hidden background functionality.
+
+
+readme for more info - https://www.violae.net/ytnotey/YTnoteyreadme.txt
+.'
+.'
+.'
 .
 .
 .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
