@@ -1,0 +1,963 @@
+echo off
+del /q /s tmp\*.txt
+del /q /s tmp
+rd tmp
+util /min etc\YTnotey_d.cmd
+setlocal enabledelayedexpansion enableextensions
+md tmp
+title YTn,
+echo set>etc\ide.ref
+ver>etc\os_.ref
+set /a ocx=1
+set /a vcx=1
+bin\nircmd win close ititle "YTsetup"
+del /q etc\*ull.ref
+copy /y "bin\sed.exe" ".\gsed.com"
+copy /y "bin\forfiles.exe" ".\gfor.com"
+copy /y "bin\YTnotey_tm_.com" "bin\YTnotey_tm.com"
+gsed -n 2,2p etc\os_.ref>etc\os_'.ref
+gsed -n -z "s/^.*on\s//pg" etc\os_'.ref>etc\os_.ref
+set /p osv=<etc\os_.ref
+set osw=%osv:~0,1%
+set /a osx=%osw%
+echo %osx% >etc\osx.txt
+tasklist /v /fo csv >tmp\_p9.txt
+bin\tac tmp\_p9.txt>tmp\_p0.txt
+findstr /i "YTn," tmp\_p0.txt>tmp\_p1.txt
+gsed -n -E "s/.*xe//pg" tmp\_p1.txt>tmp\_p2.txt
+gsed -n -E "s/^...//pg" tmp\_p2.txt>tmp\_p3.txt
+set /p piddy=<"tmp\_p3.txt"
+set paddy=%piddy:~0,4%
+set /a puddy=%paddy%
+bin\nircmd win min process /%puddy%
+md log
+md tmp
+md "%APPDATA%\YTnotey\wav\"
+md "%APPDATA%\YTnotey\"
+bin\multimon /stext "tmp\res-z_0.txt"
+type "tmp\res-z_0.txt">"tmp\res-z_1.txt"
+gsed -n 2,2p "tmp\res-z_1.txt">"tmp\res-z_2.txt"
+gsed -n -z "s/^.*:\s//pg" tmp\res-z_2.txt>tmp\res-z_3.txt
+gsed -n -z "s/\s.*$//pg" tmp\res-z_3.txt>tmp\res-x_2.txt
+gsed -n -z "s/^.*X\s//pg" tmp\res-z_3.txt>tmp\res-y_2.txt
+set u=------------------------------------------------------------
+set /p crw=<tmp\res-x_2.txt
+set /p crv=<tmp\res-y_2.txt
+set /a xrw=%crw%
+set /a xrv=%crv%
+set /a zrw6=%crw%/2-4
+set /a zrv6=%crv%/2-44
+set /a zrw9=%crw%/2-33
+set /a zrv9=%crv%/2-93
+set /a zrw9b=%crw%-222
+set /a zrv9b=%crv%-133
+set /a tmtzy=1
+set /a cfgqk=0
+set /a cfgqx=0
+set /a zrw99=1
+set /a tmtz9=1
+set /a cx11n=1
+set /a stxz=0
+set /a stxm=0
+set /a stxn=0
+set /a stzz=0
+set /a ovct=1
+set /a owct=0
+set /a cx11=1
+set /a cx12=0
+set /a cx0=0
+set /a cnt=1
+set /a cx8=0
+set /a lfc=0
+set /a lfx=0
+set /a iss=0
+set /a cx=0
+set /a tc=0
+set ytnm=-
+set l=nul
+if %osx%==6 (goto tksw1) else (goto tksw8)
+:tksw1
+set /a zth99=32
+bin\nircmd win normal process /%puddy%
+bin\nircmd win setsize process /%puddy% 1, 1, 1, 1
+bin\nircmd win center process /%puddy%
+bin\nircmd win move process /%puddy% %zrw6%, %zrv6%, 180, %zth99%
+bin\nircmd win normal process /%puddy%
+bin\nircmd win trans process /%puddy% 122
+set /a zrw99=%zrw6%
+set /a zrv99=%zrv6%
+goto tksw9
+:tksw8
+if %osx%==1 (goto tksw6)
+:tksw6
+set /a zth99=320
+bin\nircmd win normal process /%puddy%
+bin\nircmd win setsize process /%puddy% 1, 1, 1, 1
+bin\nircmd win center process /%puddy%
+bin\nircmd win move process /%puddy% %zrw9%, %zrv9%, 240, %zth99%
+bin\nircmd win normal process /%puddy%
+bin\nircmd win trans process /%puddy% 122
+set /a zrw99=%zrw9%
+set /a zrv99=%zrv9%
+goto tksw9
+:tksw9
+echo // urls>tmp\x_(c.txt
+findstr /i "url1=" config.ini>>tmp\x_(c.txt
+findstr /i "url2=" config.ini>>tmp\x_(c.txt
+findstr /i "url3=" config.ini>>tmp\x_(c.txt
+findstr /i "url4=" config.ini>>tmp\x_(c.txt
+findstr /i "url5=" config.ini>>tmp\x_(c.txt
+findstr /i "url6=" config.ini>>tmp\x_(c.txt
+findstr /i "url7=" config.ini>>tmp\x_(c.txt
+echo _>>tmp\x_(c.txt
+echo .>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // wavs>>tmp\x_(c.txt
+findstr /i "wav1=" config.ini>>tmp\x_(c.txt
+findstr /i "wav2=" config.ini>>tmp\x_(c.txt
+findstr /i "wav3=" config.ini>>tmp\x_(c.txt
+findstr /i "wav4=" config.ini>>tmp\x_(c.txt
+findstr /i "wav5=" config.ini>>tmp\x_(c.txt
+findstr /i "wav6=" config.ini>>tmp\x_(c.txt
+findstr /i "wav7=" config.ini>>tmp\x_(c.txt
+echo _>>tmp\x_(c.txt
+echo .>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // setup>>tmp\x_(c.txt
+findstr /i "stp1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // hidden-tray>>tmp\x_(c.txt
+findstr /i "try1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // check-interval>>tmp\x_(c.txt
+findstr /i "chk1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // notify-interval>>tmp\x_(c.txt
+findstr /i "not1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // notify-total>>tmp\x_(c.txt
+findstr /i "ttl1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // tuck-corner>>tmp\x_(c.txt
+findstr /i "tck1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // verbose>>tmp\x_(c.txt
+findstr /i "vrb1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // desktop>>tmp\x_(c.txt
+findstr /i "dsk1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // speak>>tmp\x_(c.txt
+findstr /i "tts1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // toast>>tmp\x_(c.txt
+findstr /i "tst1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // tips>>tmp\x_(c.txt
+findstr /i "tps1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+echo // top>>tmp\x_(c.txt
+findstr /i "tpp1=" config.ini>>tmp\x_(c.txt
+echo.>>tmp\x_(c.txt
+:tksw0
+gsed -n 27,27p tmp\x_(c.txt>tmp\config_bak20.txt
+set /p cx2=<tmp\config_bak20.txt
+set cx2q=%cx2:~5,99%
+set /a cx2p=%cx2q%
+if %cx2p%==0 (bin\nircmd win show process /%puddy%)
+if %cx2p%==1 (bin\nircmd win hide process /%puddy%)
+del /q /s %temp%\tmp_-y\*.cmd
+del /q YTnotey_sz.com
+del /q %temp%\tmp_-y\arc\*.*
+del /q /s %temp%\tmp_-y\*.*
+del /q "%temp%\tmp_-y\arc\bin\*.exe"
+del /q "%temp%\tmp_-y"
+del /q "etc\_ytv`.ref"
+del /q "etc\_vn.ref"
+del /q wad.arc
+del /q wad.cab
+findstr /i "url7=" tmp\x_(c.txt>tmp\x_c).txt
+findstr /i "wav7=" tmp\x_(c.txt>>tmp\x_c).txt
+gsed -n -E -z -e "s/^u.*v7=/987667/pg" tmp\x_c).txt>tmp\x_().txt
+set /p cfgqx=<tmp\x_().txt
+set cfgqk=%cfgqx:~0,6%
+if %cfgqk%==987667 (goto begin) else (goto cfgfl)
+:cfgfl
+bin\YTnotey_rn.com ...\U0020config.ini\U0020error\U0020-\U0020quitting "fail - ( YTnotey )" /AlwaysOnTop /FS:11 /T:3 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%
+bin\YTnotey_tm.com " 'YTnotey' - ( config.ini error - quitting )" /S:59 /V:11
+echo // urls>config.ini
+echo url1=https://www.youtube.com/RetroCreep>>config.ini
+echo url2=https://www.youtube.com/ReviewTechUSARTU>>config.ini
+echo url3=https://www.youtube.com/BenHeckHacks>>config.ini
+echo url4=https://www.youtube.com/Jayhooft>>config.ini
+echo url5=https://www.youtube.com/theshadyjayshow>>config.ini
+echo url6=https://www.youtube.com/DEEPFATFRIED>>config.ini
+echo url7=https://www.youtube.com/ThePaultergeist>>config.ini
+echo _>>config.ini
+echo .>>config.ini
+echo. >>config.ini
+echo // wavs>>config.ini
+echo wav1=cuckoo.wav>>config.ini
+echo wav2=rooster.wav>>config.ini
+echo wav3=yeehaa.wav>>config.ini
+echo wav4=doorbell.wav>>config.ini
+echo wav5=drums.wav>>config.ini
+echo wav6=sonar.wav>>config.ini
+echo wav7=steve.wav>>config.ini
+echo _>>config.ini
+echo .>>config.ini
+echo. >>config.ini
+echo // setup>>config.ini
+echo stp1=0 >>config.ini
+echo.>>config.ini
+echo // hidden-tray>>config.ini
+echo try1=0 >>config.ini
+echo.>>config.ini
+echo // check-interval>>config.ini
+echo chk1=1 >>config.ini
+echo.>>config.ini
+echo // notify-interval>>config.ini
+echo not1=2 >>config.ini
+echo.>>config.ini
+echo // notify-total>>config.ini
+echo ttl1=50 >>config.ini
+echo.>>config.ini
+echo // tuck-corner>>config.ini
+echo tck1=1 >>config.ini
+echo.>>config.ini
+echo // verbose>>config.ini
+echo vrb1=0 >>config.ini
+echo.>>config.ini
+echo // desktop>>config.ini
+echo dsk1=1 >>config.ini
+echo.>>config.ini
+echo // speak>>config.ini
+echo tts1=1 >>config.ini
+echo.>>config.ini
+echo // toast>>config.ini
+echo tst1=1 >>config.ini
+echo.>>config.ini
+echo // tips>>config.ini
+echo tps1=1 >>config.ini
+echo.>>config.ini
+echo // top>>config.ini
+echo tpp1=1 >>config.ini
+echo.>>config.ini
+bin\millisleep 3333
+start config.ini
+exit
+:begin
+gsed -n 2,2p tmp\x_(c.txt>tmp\config_bak01.txt
+set /p cu1=<tmp\config_bak01.txt
+gsed -n 3,3p tmp\x_(c.txt>tmp\config_bak02.txt
+set /p cu2=<tmp\config_bak02.txt
+gsed -n 4,4p tmp\x_(c.txt>tmp\config_bak03.txt
+set /p cu3=<tmp\config_bak03.txt
+gsed -n 5,5p tmp\x_(c.txt>tmp\config_bak04.txt
+set /p cu4=<tmp\config_bak04.txt
+gsed -n 6,6p tmp\x_(c.txt>tmp\config_bak05.txt
+set /p cu5=<tmp\config_bak05.txt
+gsed -n 7,7p tmp\x_(c.txt>tmp\config_bak06.txt
+set /p cu6=<tmp\config_bak06.txt
+gsed -n 8,8p tmp\x_(c.txt>tmp\config_bak07.txt
+set /p cu7=<tmp\config_bak07.txt
+gsed -n 9,9p tmp\x_(c.txt>tmp\config_bak08.txt
+set /p cu8=<tmp\config_bak08.txt
+gsed -n 10,10p tmp\x_(c.txt>tmp\config_bak09.txt
+set /p cu9=<tmp\config_bak09.txt
+gsed -n 13,13p tmp\x_(c.txt>tmp\config_bak10.txt
+set /p cw1=<tmp\config_bak10.txt
+gsed -n 14,14p tmp\x_(c.txt>tmp\config_bak11.txt
+set /p cw2=<tmp\config_bak11.txt
+gsed -n 15,15p tmp\x_(c.txt>tmp\config_bak12.txt
+set /p cw3=<tmp\config_bak12.txt
+gsed -n 16,16p tmp\x_(c.txt>tmp\config_bak13.txt
+set /p cw4=<tmp\config_bak13.txt
+gsed -n 17,17p tmp\x_(c.txt>tmp\config_bak14.txt
+set /p cw5=<tmp\config_bak14.txt
+gsed -n 18,18p tmp\x_(c.txt>tmp\config_bak15.txt
+set /p cw6=<tmp\config_bak15.txt
+gsed -n 19,19p tmp\x_(c.txt>tmp\config_bak16.txt
+set /p cw7=<tmp\config_bak16.txt
+gsed -n 20,20p tmp\x_(c.txt>tmp\config_bak17.txt
+set /p cw8=<tmp\config_bak17.txt
+gsed -n 21,21p tmp\x_(c.txt>tmp\config_bak18.txt
+set /p cw9=<tmp\config_bak18.txt
+gsed -n 24,24p tmp\x_(c.txt>tmp\config_bak19.txt
+set /p cx1=<tmp\config_bak19.txt
+gsed -n 27,27p tmp\x_(c.txt>tmp\config_bak20.txt
+set /p cx2=<tmp\config_bak20.txt
+gsed -n 30,30p tmp\x_(c.txt>tmp\config_bak21.txt
+set /p cx3=<tmp\config_bak21.txt
+gsed -n 33,33p tmp\x_(c.txt>tmp\config_bak22.txt
+set /p cx4=<tmp\config_bak22.txt
+gsed -n 36,36p tmp\x_(c.txt>tmp\config_bak23.txt
+set /p cx5=<tmp\config_bak23.txt
+gsed -n 39,39p tmp\x_(c.txt>tmp\config_bak24.txt
+set /p cx6=<tmp\config_bak24.txt
+gsed -n 42,42p tmp\x_(c.txt>tmp\config_bak25.txt
+set /p cx7=<tmp\config_bak25.txt
+gsed -n 45,45p tmp\x_(c.txt>tmp\config_bak26.txt
+set /p cx8=<tmp\config_bak26.txt
+gsed -n 48,48p tmp\x_(c.txt>tmp\config_bak27.txt
+set /p cx9=<tmp\config_bak27.txt
+gsed -n 51,51p tmp\x_(c.txt>tmp\config_bak28.txt
+set /p cx0=<tmp\config_bak28.txt
+gsed -n 54,54p tmp\x_(c.txt>tmp\config_bak29.txt
+set /p cx11=<tmp\config_bak29.txt
+gsed -n 57,57p tmp\x_(c.txt>tmp\config_bak30.txt
+set /p cx12=<tmp\config_bak30.txt
+set url1="0"
+set url2="%cu1:~5,99%/streams/streams.html"
+set url3="%cu2:~5,99%/streams/streams.html"
+set url4="%cu3:~5,99%/streams/streams.html"
+set url5="%cu4:~5,99%/streams/streams.html"
+set url6="%cu5:~5,99%/streams/streams.html"
+set url7="%cu6:~5,99%/streams/streams.html"
+set url8="%cu7:~5,99%/streams/streams.html"
+set url9="%cu8:~5,99%/streams/streams.html"
+set url10="%cu9:~5,99%/streams/streams.html"
+set wav1="0"
+set wav2="%appdata%\YTnotey\wav\%cw1:~5,99%"
+set wav3="%appdata%\YTnotey\wav\%cw2:~5,99%"
+set wav4="%appdata%\YTnotey\wav\%cw3:~5,99%"
+set wav5="%appdata%\YTnotey\wav\%cw4:~5,99%"
+set wav6="%appdata%\YTnotey\wav\%cw5:~5,99%"
+set wav7="%appdata%\YTnotey\wav\%cw6:~5,99%"
+set wav8="%appdata%\YTnotey\wav\%cw7:~5,99%"
+set wav9="%appdata%\YTnotey\wav\%cw8:~5,99%"
+set wav10="%appdata%\YTnotey\wav\%cw9:~5,99%"
+:hnt0
+set cx11n=%cx11:~5,99%
+if %cx11n%==0 (goto hnt0x) else (goto hnt1)
+:hnt0x
+cd bin
+ren YTnotey_tm.com YTnotey_tm_.com
+cd..
+:hnt1
+set cx0q=%cx0:~5,99%
+set /a cx0p=%cx0q%
+if %cx0p%==1 (goto xrby) else (goto xext)
+:xrby
+bin\YTnotey_rn.com ...\U0020checking\U0020started\U0020 "info - ( YTnotey )" /AlwaysOnTop /FS:11 /T:3 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%
+:xext
+bin\YTnotey_tm.com " 'YTnotey' - ( checking started )" /S:59 /V:11
+if exist "etc\_s.ref" (goto whd1) else (goto setz)
+:setz
+set cx1q=%cx1:~5,99%
+set /a cx1p=%cx1q%
+if %cx1p%==1 (goto sety) else (goto setx)
+:sety
+::ren "config.ini" "old_config.txt"
+cd etc
+bin\startx /min /hide YTnotey_d.cmd
+bin\millisleep 333
+goto eof
+:setx
+:whd1
+set cx7q=%cx7:~5,99%
+set /a cx7p=%cx7q%
+if %cx7p%==1 (goto vrby) else (goto vext)
+:vrby
+copy /y "etc\_main-v.cmd" ".\"
+call _main-v.cmd
+exit
+:vext
+set cx3y=%cx3:~5,99%
+set /a cx3z=%cx3y%*250
+set j=bin\millisleep %cx3z%
+set cx4w=%cx4:~5,99%
+set /a cx4v=%cx4w%*1000
+set pf=bin\millisleep %cx4v%
+set cx2q=%cx2:~5,99%
+set /a cx2p=%cx2q%
+set cx6q=%cx6:~5,99%
+set /a cx6p=%cx6q%
+bin\nircmd win normal process /%puddy%
+if %cx6p%==1 (goto tck2i) else (goto tck2x)
+:tck2i
+bin\nircmd win setsize process /%puddy% 1, 1, 1, 1
+bin\nircmd win center process /%puddy%
+bin\nircmd win move process /%puddy% %zrw99%, %zrv99%, 180, %zth99%
+:tck2x
+if %cx6p%==0 (goto tck4i) else (goto tck4x)
+:tck4i
+bin\nircmd win setsize process /%puddy% 1, 1, 1, 1
+bin\nircmd win center process /%puddy%
+bin\nircmd win move process /%puddy% -%zrw99%, -%zrv99%, 1280, 666
+:tck4x
+if %cx2p%==1 (goto hid1i) else (goto hid1o)
+:hid1i
+bin\nircmd win hide process /%puddy%
+goto hid1x
+:hid1o
+set /a cx2p=0
+bin\nircmd win show process /%puddy%
+goto hid1x
+:hid1x
+::set /p od=<etc\d_.nul
+md tmp
+md tmp\tmp
+md log
+set /a cx1z=%cx1:~5,99%
+::if %cx1z%==1 (goto setup) else (goto start)
+if exist "etc\_ytv-.ref" (goto vcxc2) else (goto start)
+:vcxc2
+set vcxd=%date:~5,1%
+if %vcxd% equ 3 (goto vcxc3) else (goto start)
+:vcxc3
+set vcxt=%time:~2,1%
+if %vcxt% equ 9 (goto vcxc9) else (goto start)
+:vcxc9
+echo %vcx%>etc\_ytv.ref
+del /q etc\_ytv-.ref
+:start
+set cx12n=%cx12:~5,99%
+set /a cx12q=100+%cx12n%
+if %cx12q% equ 100 (goto zdhnc9) else (zdhnc1)
+:zdhnc1
+bin\nircmd win focus process /%puddy%
+bin\nircmd win redraw process /%puddy%
+bin\nircmd win settopmost process /%puddy% 1
+:zdhnc9
+if exist "etc\null.ref" goto eof
+::if %cnt%==2 (goto frigs)
+copy /y log\YT*.txt %userprofile%\Desktop
+ren log\YT*.txt _YT*.txt
+del /q etc\_s.ref
+del /q "etc\_owa.ref"
+del /q "etc\_vn.ref"
+set p9h7z=0
+taskkill /F /IM gsed.com
+taskkill /F /IM inetget.exe
+taskkill /F /IM tmes.exe
+taskkill /F /IM gfor.com
+cd> tmp\_9dir.txt
+set dyt=%date:~4,2%
+set /a ovct=%ovct%+1
+set /p dr=<tmp\_9dir.txt
+if exist "etc\null.ref" goto eof
+cd %dr%
+if %ovct%==1 (goto start)
+del /q etc\streams.*
+del /f /q %temp%\_pw0.vbs
+del /q tmp\_s5.txt
+del /q etc\dull.ref
+del /q tmp\_p99-.txt
+if exist "etc\null.ref" goto eof
+::del /q "nul2*">%l%
+if %cx2p%==1 (goto hsd6i) else (goto hsd6x)
+:hsd6i
+if exist "etc\sull.ref" (goto hsd6o) else (goto hsd6x)
+:hsd6o
+set /a cx2p=0
+del /q "etc\sull.ref"
+:hsd6x
+if %cx2p%==0 (goto hsd7i) else (goto hsd7x)
+:hsd7i
+if exist "etc\sull.ref" (goto hsd7o) else (goto hsd7x)
+:hsd7o
+set /a cx2p=1
+del /q "etc\sull.ref"
+:hsd7x
+:hid3x
+if exist "etc\null.ref" goto eof
+if %cx2p%==1 (goto hid2i) else (goto hid2o)
+:hid2i
+bin\nircmd win hide process /%puddy%
+goto hid2x
+:hid2o
+bin\nircmd win show process /%puddy%
+bin\nircmd win show stitle "Administrator"
+goto hid2x
+:hid2x
+:hsis
+if %cnt%==2 (goto tmt3) else (goto tmt4)
+:tmt3
+cd log
+..\gfor /m log.txt /c "cmd /c echo fsize">..\tmp\lfc_out.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\lfc_out.txt>tmp\lfc_out_.txt
+:tmt4
+if %cnt%==5 (goto tmt5) else (goto tmtx)
+:tmt5
+set /p lfc=<tmp\lfc_out_.txt
+set /a lfc=%lfc%+30
+cd log
+..\gfor /m log.txt /c "cmd /c echo fsize">..\tmp\lfc_oot.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\lfc_oot.txt>tmp\lfc_oot_.txt
+set /p lfx=<tmp\lfc_oot_.txt
+set /a lfx=%lfx%
+if %lfx% lss %lfc% (goto tmt9) else (goto tmtx)
+:tmt9
+set cx0q=%cx0:~5,99%
+set /a cx0p=%cx0q%
+if %cx0p%==1 (goto yrby) else (goto yext)
+:yrby
+bin\YTnotey_rn.com ...\U0020issue-\U0020try\U0020to\U0020restart\U0020 "info - ( YTnotey )" /AlwaysOnTop /FS:11 /T:3 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%
+:yext
+if exist "etc\null.ref" goto eof
+bin\YTnotey_tm.com " 'YTnotey' - ( issue - try to restart )" /S:53 /I:Error /V:3 /W
+set /a iss=9
+:tmtx
+if exist "etc\null.ref" goto eof
+copy /y tmp\_s*.txt tmp\tmp\
+copy /y tmp\_u*.txt tmp\tmp\
+del /q tmp\_s*.txt
+del /q tmp\_u*.txt
+del etc\dull.ref
+if exist "etc\null.ref" goto eof
+del etc\null.ref
+copy /y tmp\_v8v1b.txt tmp\_v8v1c.txt
+copy /y tmp\_v8v1a.txt tmp\_v8v1b.txt
+copy /y tmp\_v8v1.txt  tmp\_v8v1a.txt
+copy /y tmp\_v8v2b.txt tmp\_v8v2c.txt
+copy /y tmp\_v8v2a.txt tmp\_v8v2b.txt
+copy /y tmp\_v8v2.txt  tmp\_v8v2a.txt
+copy /y tmp\_v8v3b.txt tmp\_v8v3c.txt
+copy /y tmp\_v8v3a.txt tmp\_v8v3b.txt
+copy /y tmp\_v8v3.txt  tmp\_v8v3a.txt
+copy /y tmp\_v8v4b.txt tmp\_v8v4c.txt
+copy /y tmp\_v8v4a.txt tmp\_v8v4b.txt
+copy /y tmp\_v8v4.txt  tmp\_v8v4a.txt
+copy /y tmp\_v8v5b.txt tmp\_v8v5c.txt
+copy /y tmp\_v8v5a.txt tmp\_v8v5b.txt
+copy /y tmp\_v8v5.txt  tmp\_v8v5a.txt
+copy /y tmp\_v8v6b.txt tmp\_v8v6c.txt
+copy /y tmp\_v8v6a.txt tmp\_v8v6b.txt
+copy /y tmp\_v8v6.txt  tmp\_v8v6a.txt
+copy /y tmp\_v8v7b.txt tmp\_v8v7c.txt
+copy /y tmp\_v8v7a.txt tmp\_v8v7b.txt
+copy /y tmp\_v8v7.txt  tmp\_v8v7a.txt
+copy /y tmp\_v8v8b.txt tmp\_v8v8c.txt
+copy /y tmp\_v8v8a.txt tmp\_v8v8b.txt
+copy /y tmp\_v8v8.txt  tmp\_v8v8a.txt
+copy /y tmp\_v8v9b.txt tmp\_v8v9c.txt
+copy /y tmp\_v8v9a.txt tmp\_v8v9b.txt
+copy /y tmp\_v8v9.txt  tmp\_v8v9a.txt
+copy /y tmp\_v8v10b.txt tmp\_v8v10c.txt
+copy /y tmp\_v8v10a.txt tmp\_v8v10b.txt
+copy /y tmp\_v8v10.txt  tmp\_v8v10a.txt
+if exist "etc\null.ref" goto eof
+set /a cnt=%inc%+1
+set /a inc=%cnt%
+set /a lct=%lct%+1
+if %lct%==666 (echo.>log\log.txt
+set /a lc5=1)
+if %cnt%==1 (echo %url1%>tmp\_u1.txt
+echo %wav1%>tmp\_u9.txt)
+if %cnt%==2 (echo %url2%>tmp\_u1.txt
+echo %wav2%>tmp\_u9.txt)
+if %cnt%==3 (echo %url3%>tmp\_u1.txt
+echo %wav3%>tmp\_u9.txt)
+if %cnt%==4 (echo %url4%>tmp\_u1.txt
+echo %wav4%>tmp\_u9.txt)
+if %cnt%==5 (echo %url5%>tmp\_u1.txt
+echo %wav5%>tmp\_u9.txt)
+if %cnt%==6 (echo %url6%>tmp\_u1.txt
+echo %wav6%>tmp\_u9.txt)
+if %cnt%==7 (echo %url7%>tmp\_u1.txt
+echo %wav7%>tmp\_u9.txt)
+if %cnt%==8 (echo %url8%>tmp\_u1.txt
+echo %wav8%>tmp\_u9.txt)
+if %cnt%==9 (echo %url9%>tmp\_u1.txt
+echo %wav9%>tmp\_u9.txt)
+if %cnt%==10 (echo %url10%>tmp\_u1.txt
+echo %wav10%>tmp\_u9.txt)
+::copy /y tmp\streams.html log\streams-%cnt%.html
+del /q tmp\streams*.html
+if %cnt% gtr 8 (set /a cnt=1
+set /a inc=1)
+set /p url9=<tmp\_u1.txt
+set /p wav9=<tmp\_u9.txt
+gsed -n -E -z -e "s/\/streams.streams.html|\x22//pg" tmp\_u1.txt>tmp\_q1z.txt
+gsed -n -E -z -e "s/^.?*//pg" tmp\_q1z.txt>tmp\_a1u.txt
+set /p ytnm=<tmp\_a1u.txt
+if exist "etc\null.ref" goto eof
+:gets
+set /a cmt=%cnt%-1
+set /a owct=%ovct%-1
+if exist "etc\null.ref" goto eof
+if %cnt%==1 (set /a ovct=%ovct%-1
+goto start)
+title 'YTnotey'
+cls
+echo %cmt%: '%ytnm%' ...(%owct%)
+cd etc
+::echo.
+echo %u%
+echo.
+if exist "etc\null.ref" goto eof
+if %cnt%==1 (echo.)
+if %cnt%==2 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==3 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==4 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==5 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==6 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==7 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==8 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==9 (title 'YTnotey'
+..\bin\inetget --no-retry "%url9%" "streams.html"
+title 'YTnotey')
+if %cnt%==10 (echo %cnt%)
+if exist "etc\null.ref" goto eof
+:chk
+if exist "streams.html" (goto one) else (goto sfail)
+:sfail
+cd..
+goto start
+:one
+if exist "etc\null.ref" goto eof
+..\gfor /m streams.html /c "cmd /c echo fsize">..\tmp\_h9.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\_h9.txt>tmp\_h0.txt
+taskkill /F /IM gsed.com
+set "cntf=tmp\_h0.txt"
+set /p chksz=<%cntf%
+set sizct=%chksz%
+if %sizct% lss 800000 (goto start) else (goto two)
+:two
+move etc\streams.html tmp\>%l%
+taskkill /F /IM gsed.com
+gsed -n -E -z -e "s/videoId/videoId\n/pg" tmp/streams.html>tmp/_s1.txt
+taskkill /F /IM gsed.com
+gsed -n -E -z -e "s/watchEndpointSupportedOnesieConfig.*$//pg" tmp/_s1.txt>tmp/_s2.txt
+taskkill /F /IM gsed.com
+bin\tac tmp/_s2.txt>tmp/_s3.txt
+gsed -n -E -z -e "s/videoCommand.*$//pg" tmp/_s3.txt>tmp/_s5.txt
+taskkill /F /IM gsed.com
+if exist "etc\null.ref" goto eof
+:thre
+cd %dr%\tmp
+..\gfor /m _s5.txt /c "cmd /c echo fsize">_s5z.txt
+cd %dr%
+gsed -n -E -z -e "1s/\n//pg" tmp\_s5z.txt>tmp\_s5x.txt
+taskkill /F /IM gsed.com
+del /q tmp\_99-.txt
+set "cntf=tmp\_s5x.txt"
+set /p chkszj=<%cntf%
+set sizctj=%chkszj%
+if %sizctj% lss 39 (goto four) else (goto nine)
+:four
+if %sizctj%==0 (goto nine) else (goto five)
+:nine
+goto start
+:five
+echo [%time%-%date%]...%owct%>>log\log.txt
+echo (%cmt%) - '%ytnm%'>>log\log.txt
+if %cnt%==1 (copy /y tmp\_s5.txt tmp\_v8v1.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==2 (copy /y tmp\_s5.txt tmp\_v8v2.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==3 (copy /y tmp\_s5.txt tmp\_v8v3.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==4 (copy /y tmp\_s5.txt tmp\_v8v4.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==5 (copy /y tmp\_s5.txt tmp\_v8v5.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==6 (copy /y tmp\_s5.txt tmp\_v8v6.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==7 (copy /y tmp\_s5.txt tmp\_v8v7.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==8 (copy /y tmp\_s5.txt tmp\_v8v8.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==9 (copy /y tmp\_s5.txt tmp\_v8v9.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+if %cnt%==10 (copy /y tmp\_s5.txt tmp\_v8v10.txt>%l%
+type tmp\_s5.txt>>log\log.txt)
+echo.>>log\log.txt
+echo.>>log\log.txt
+if exist "etc\null.ref" goto eof
+if %cnt%==1 (
+fc /l tmp\_s5.txt tmp\_v8v1.txt>tmp\_z9-%cnt%.txt)
+if %cnt%==1 (
+fc /l tmp\_s5.txt tmp\_v8v1a.txt>tmp\_z9a-%cnt%.txt)
+if %cnt%==1 (
+fc /l tmp\_s5.txt tmp\_v8v1b.txt>tmp\_z9b-%cnt%.txt)
+if %cnt%==1 (
+fc /l tmp\_s5.txt tmp\_v8v1c.txt>tmp\_z9c-%cnt%.txt)
+if %cnt%==2 (
+fc /l tmp\_s5.txt tmp\_v8v2.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==2 (
+fc /l tmp\_s5.txt tmp\_v8v2a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==2 (
+fc /l tmp\_s5.txt tmp\_v8v2b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==2 (
+fc /l tmp\_s5.txt tmp\_v8v2c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==3 (
+fc /l tmp\_s5.txt tmp\_v8v3.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==3 (
+fc /l tmp\_s5.txt tmp\_v8v3a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==3 (
+fc /l tmp\_s5.txt tmp\_v8v3b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==3 (
+fc /l tmp\_s5.txt tmp\_v8v3c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==4 (
+fc /l tmp\_s5.txt tmp\_v8v4.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==4 (
+fc /l tmp\_s5.txt tmp\_v8v4a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==4 (
+fc /l tmp\_s5.txt tmp\_v8v4b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==4 (
+fc /l tmp\_s5.txt tmp\_v8v4c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==5 (
+fc /l tmp\_s5.txt tmp\_v8v5.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==5 (
+fc /l tmp\_s5.txt tmp\_v8v5a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==5 (
+fc /l tmp\_s5.txt tmp\_v8v5b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==5 (
+fc /l tmp\_s5.txt tmp\_v8v5c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==6 (
+fc /l tmp\_s5.txt tmp\_v8v6.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==6 (
+fc /l tmp\_s5.txt tmp\_v8v6a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==6 (
+fc /l tmp\_s5.txt tmp\_v8v6b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==6 (
+fc /l tmp\_s5.txt tmp\_v8v6c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==7 (
+fc /l tmp\_s5.txt tmp\_v8v7.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==7 (
+fc /l tmp\_s5.txt tmp\_v8v7a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==7 (
+fc /l tmp\_s5.txt tmp\_v8v7b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==7 (
+fc /l tmp\_s5.txt tmp\_v8v7c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==8 (
+fc /l tmp\_s5.txt tmp\_v8v8.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==8 (
+fc /l tmp\_s5.txt tmp\_v8v8a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==8 (
+fc /l tmp\_s5.txt tmp\_v8v8b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==8 (
+fc /l tmp\_s5.txt tmp\_v8v8c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==9 (
+fc /l tmp\_s5.txt tmp\_v8v9.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==9 (
+fc /l tmp\_s5.txt tmp\_v8v9a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==9 (
+fc /l tmp\_s5.txt tmp\_v8v9b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==9 (
+fc /l tmp\_s5.txt tmp\_v8v9c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if %cnt%==10 (
+fc /l tmp\_s5.txt tmp\_v8v10.txt>tmp\_z9-%cnt%.txt
+%j%)
+if %cnt%==10 (
+fc /l tmp\_s5.txt tmp\_v8v10a.txt>tmp\_z9a-%cnt%.txt
+%j%)
+if %cnt%==10 (
+fc /l tmp\_s5.txt tmp\_v8v10b.txt>tmp\_z9b-%cnt%.txt
+%j%)
+if %cnt%==10 (
+fc /l tmp\_s5.txt tmp\_v8v10c.txt>tmp\_z9c-%cnt%.txt
+%j%)
+if exist "etc\null.ref" goto eof
+echo 1>tmp\_p7z7z.txt
+del /q tmp\_p99-.txt
+del /q tmp\_p7z7.txt
+tasklist /v /fo csv >tmp\_p99-.txt
+type tmp\_s5.txt>>log\log.txt
+type tmp\_s5.txt>>log\log_z.txt
+type tmp\_z9.txt>>log\log.txt
+type tmp\_z9a.txt>>log\log.txt
+type tmp\_z9b.txt>>log\log.txt
+type tmp\_z9c.txt>>log\log.txt
+copy /y tmp\_s*.txt tmp\tmp\
+copy /y tmp\_u*.txt tmp\tmp\
+del /q tmp\_s*.txt
+del /q tmp\_u*.txt
+findstr /i "YTnotey.exe" tmp\_p99-.txt>tmp\_p9h7.txt
+set /p p9h7c=<"tmp\_p9h7.txt"
+set p9h7k=%p9h7c%
+set p9h7z=%p9h7k:~1,4%
+echo %p9h7z%>tmp\_p7z7.txt
+gsed -n -E -z -e "s/YTno/7/pg" tmp\_p7z7.txt>tmp\_p7z7z.txt
+set /p p9z7q=<"tmp\_p7z7z.txt"
+set p9z7z=%p9z7q%
+if %p9z7z%==7 (goto phfk) else (goto eofx)
+goto eofx
+:phfk
+if exist "etc\null.ref" goto eof
+set size=89
+set bytes=83
+set file="tmp\_z9-%cnt%.txt"
+set filea="tmp\_z9a-%cnt%.txt"
+set fileb="tmp\_z9b-%cnt%.txt"
+set filec="tmp\_z9c-%cnt%.txt"
+if exist "etc\_ytv-.ref" (goto ccfm) else (goto stxhx)
+:stxhx
+set stxu=%time%
+set stxy=%stxu:~3,2%
+set stxz=1%stxy%
+if exist "etc\_ytv''.ref" (goto stxyz) else (goto stxya)
+:stxyz
+set stzu=%time%
+set stzy=%stzu:~1,1%
+set stzz=10%stzy%
+if %stzz% equ 101 (goto stxya) else (goto ccfm)
+:stxya
+::if %cmt% equ 3 (goto stxc) else (goto ccfm)
+:stxc
+if %stxz% equ 159 (goto stxa) else (goto ccfm)
+:stxa
+if exist "etc\_ytv`.ref" (goto ccfm)
+bin\inetget --no-retry "http://www.violae.net/ytnotey/_ytv'.ref" "_ytv'.ref"
+move /y *.ref etc\
+set /p stxaa=<"etc\_ytv'.ref"
+set /a stxn=%stxaa%
+set /p stxbb=<"etc\_ytv.ref"
+set /a stxm=%stxbb%
+if %stxn% gtr %stxm% (goto stxd) else (goto stxt)
+:stxt
+del /f /q "etc\_ytv'.ref"
+goto ccfm
+:stxd
+bin\inetget --no-retry "http://www.violae.net/ytnotey/_ytv''.ref" "_ytv''.ref"
+move /y *.ref etc\
+bin\YTnotey_tm.com " 'YTnotey' - ( update available )" /S:137 /I:Info /V:7 /W
+cd bin
+startx /hide ..\etc\YTnotey_u.cmd
+millisleep 99
+YTnotey_rn.com ...\U0020update\U0020available\U0020to\U0020download\U0020 "info - ( YTnotey )" /AlwaysOnTop /FS:11 /T:3 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%
+cd..
+:ccfm
+if exist "etc\null.ref" goto eof
+if %owct%==14 (goto tmt7) else (goto tmtz)
+:tmt7
+set cx0q=%cx0:~5,99%
+set /a cx0p=%cx0q%
+if %cx0p%==1 (goto wrby) else (goto wext)
+:wrby
+bin\YTnotey_rn.com ...\U0020working-\U0020two\U0020cycles\U0020successful\U0020 "info - ( YTnotey )" /AlwaysOnTop /FS:11 /T:3 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%
+:wext
+if %iss%==9 (goto tmtz)
+bin\YTnotey_tm.com " 'YTnotey' - ( two cycles successful )" /S:137 /I:Info /V:7 /W
+:tmtz
+if exist "etc\_vn.ref" (goto tmtz2) else (goto twoz)
+:tmtz2
+set cnt=5
+goto frigs
+:twoz
+cd tmp
+..\gfor /m _z9a-%cnt%.txt /c "cmd /c echo fsize">_h9a.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\_h9a.txt>tmp\_h0a.txt
+taskkill /F /IM gsed.com
+if exist "etc\null.ref" goto eof
+set "cntf=tmp\_h0a.txt"
+set /p chksza=<%cntf%
+set sizcta=%chksza%
+if exist "etc\null.ref" goto eof
+if %sizcta% lss 83 (goto start) else (goto twoa)
+:twoa
+cd tmp
+..\gfor /m _z9b-%cnt%.txt /c "cmd /c echo fsize">_h9b.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\_h9b.txt>tmp\_h0b.txt
+taskkill /F /IM gsed.com
+set "cntf=tmp\_h0b.txt"
+set /p chkszb=<%cntf%
+set sizctb=%chkszb%
+if exist "etc\null.ref" goto eof
+if %sizctb% lss 83 (goto start) else (goto twob)
+:twob
+cd tmp
+..\gfor /m _z9c-%cnt%.txt /c "cmd /c echo fsize">_h9c.txt
+cd..
+gsed -n -E -z -e "1s/\n//pg" tmp\_h9c.txt>tmp\_h0c.txt
+taskkill /F /IM gsed.com
+set "cntf=tmp\_h0c.txt"
+set /p chkszc=<%cntf%
+set sizctc=%chkszc%
+if exist "etc\null.ref" goto eof
+if %sizctc% lss 83 (goto start) else (goto frigs)
+:frigs
+echo .>"etc\_yab'.ref"
+echo %ytnm%>>"etc\_yab'.ref"
+echo %wav9%>>"etc\_yab'.ref"
+echo .>"etc\_yab.ref"
+echo %zrw9b%,,,>>"etc\_yab.ref"
+echo %zrv9b%,,,>>"etc\_yab.ref"
+echo %cx2p%,,,>>"etc\_yab.ref"
+echo %cx1p%,,,>>"etc\_yab.ref"
+echo %cmt%,,,>>"etc\_yab.ref"
+echo %cnt%,,,>>"etc\_yab.ref"
+echo %dyt%,,,>>"etc\_yab.ref"
+echo %cx0%,,,>>"etc\_yab.ref"
+echo %cx4%,,,>>"etc\_yab.ref"
+echo %cx5%,,,>>"etc\_yab.ref"
+echo %cx8%,,,>>"etc\_yab.ref"
+echo %cx9%,,,>>"etc\_yab.ref"
+echo %pf%,,,>>"etc\_yab.ref"
+bin\millisleep 333
+cd etc
+..\util /min /hide "YTnotey_a.cmd"
+cd..
+goto start
+:rstrt
+taskkill /F /IM gsed.com
+taskkill /F /IM inetget.exe
+taskkill /F /IM gfor.com
+bin\nircmd win min process /%puddy%
+bin\startx /min _main.cmd
+:eof
+cd..
+taskkill /F /IM gsed.com
+taskkill /F /IM inetget.exe
+taskkill /F /IM gfor.com
+if exist "etc\_s.ref" (goto eofx) else (goto wnts)
+:wnts
+if %cx1p%==1 (goto wnsx) else (goto eofx)
+:wnsx
+bin\millisleep 3333
+start _main.cmd
+:eofx
+exit

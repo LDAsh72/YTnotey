@@ -1,0 +1,94 @@
+#Persistent
+Run util.com /belownormal /min _main.cmd, , Min
+TrayTip, —————, ' YTnotey '`n`nYouTube notification utility...   `n `n `n, 2222, 17
+Run util.com /min /hide YTnotey_q.cmd, etc
+
+Menu, Tray, Tip, 'YTnotey' - YouTube notification utility...
+Menu, Tray, NoStandard
+Menu, Tray, Add, • 'YTnotey' •, OnDefaultTrayAction
+Menu, Tray, Add, ———————
+Menu, Tray, Add, skip-notify, Option1
+Menu, Tray, Add, swap-hidden, Option2
+Menu, Tray, Add, open-readme, Option3
+Menu, Tray, Add, find-update, Option4
+Menu, Tray, Add, edit-config, Option5
+Menu, Tray, Add, logs-folder, Option6
+Menu, Tray, Add, _________________
+Menu, Tray, Add, restart, Option7
+Menu, Tray, Add, ________________
+Menu, Tray, Add, …EXIT, Exit
+Menu, Tray, Default, • 'YTnotey' •
+Menu, Tray, Icon, • 'YTnotey' •, %systemroot%\system32\shell32.dll, 35
+Menu, Tray, Icon, skip-notify, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, swap-hidden, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, find-update, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, edit-config, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, logs-folder, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, open-readme, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, restart, %systemroot%\system32\shell32.dll, 268
+Menu, Tray, Icon, …EXIT, %systemroot%\system32\imageres.dll, 162
+
+———————() {
+return
+}
+YTnotey() {
+return
+}
+_________________() {
+return
+}
+________________() {
+return
+}
+
+OnDefaultTrayAction() {
+MsgBox, 321, YTnotey, ·                   ... ' YTnotey ' ...                   ·`n`n———————————————————`n`n YouTube notification utility. (1.0)`n`n (C)2026 -LDAsh (Violation Entertainment)`n https://www.violae.net/ytnotey/`n https://github.com/LDAsh72`n  ld_ash@violae.net`n`n———————————————————
+TrayTip, —————, ' YTnotey '`n`nYouTube notification utility...   `n `n `n, 2222, 17
+return
+}
+
+Option1() {
+TrayTip, —————, ...skipping notify...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_s.cmd, etc
+return
+}
+
+Option2() {
+TrayTip, —————, ...toggle visibility...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_h.cmd, etc
+return
+}
+
+Option3() {
+Run util.com /min /hide YTnotey_r.cmd, etc
+return
+}
+
+Option4() {
+TrayTip, —————, ...checking updates...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_u.cmd, etc
+return
+}
+
+Option5() {
+TrayTip, —————, ...requires restart...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_c.cmd, etc
+return
+}
+
+Option6() {
+Run util.com /min /hide YTnotey_e.cmd, etc
+return
+}
+
+Option7() {
+TrayTip, —————, ...restarting console...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_z.cmd, etc
+return
+}
+
+Exit() {
+TrayTip, —————, ...closing...     `n `n·`n, 2222, 17
+Run util.com /min /hide YTnotey_x.cmd, etc
+exitapp
+}
