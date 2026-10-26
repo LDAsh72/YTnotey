@@ -1,0 +1,171 @@
+@echo off
+@cls&&color 01&&title YTn_A&&cd..
+@setlocal enabledelayedexpansion enableextensions
+set u=------------------------------------------------------------
+
+set /a tc=0
+@tasklist /v /fo csv >tmp\_p9y.txt
+@bin\tac tmp\_p9y.txt>tmp\_p0y.txt
+@findstr /i "YTn_A" tmp\_p0y.txt>tmp\_p1y.txt
+@gsed -n -E "s/.*xe//pg" tmp\_p1y.txt>tmp\_p2y.txt
+@gsed -n -E "s/^...//pg" tmp\_p2y.txt>tmp\_p3y.txt
+set /p pyddo=<"tmp\_p3y.txt"
+set pydda=%pyddo:~0,4%
+set /a pyddy=%pydda%
+@bin\nircmd win hide process /%pyddy%
+
+@cls&&color 01
+@gsed -e "s/^...1=//pg" etc\_yab.ref>etc\_yab''.ref
+@gsed -n -E -z -e "s/,,,//pg" etc\_yab''.ref>etc\_yab'''.ref
+@gsed -n -E -z -e "s/bin.*eep //pg" etc\_yab'''.ref>etc\_yab''.ref
+@gsed -n 2,2p etc\_yab'.ref>tmp\_yab01.txt
+@gsed -n 3,3p etc\_yab'.ref>tmp\_yab02.txt
+@gsed -n 2,2p etc\_yab''.ref>tmp\_yab03.txt
+@gsed -n 3,3p etc\_yab''.ref>tmp\_yab04.txt
+@gsed -n 4,4p etc\_yab''.ref>tmp\_yab05.txt
+@gsed -n 5,5p etc\_yab''.ref>tmp\_yab06.txt
+@gsed -n 6,6p etc\_yab''.ref>tmp\_yab07.txt
+@gsed -n 7,7p etc\_yab''.ref>tmp\_yab08.txt
+@gsed -n 8,8p etc\_yab''.ref>tmp\_yab09.txt
+@gsed -n 9,9p etc\_yab''.ref>tmp\_yab10.txt
+@gsed -n 11,11p etc\_yab''.ref>tmp\_yab11.txt
+@gsed -n 13,13p etc\_yab''.ref>tmp\_yab12.txt
+@gsed -n 15,15p etc\_yab''.ref>tmp\_yab13.txt
+@gsed -n 17,17p etc\_yab''.ref>tmp\_yab14.txt
+@gsed -n 19,19p etc\_yab''.ref>tmp\_yab15.txt
+
+set /p ytnm=<tmp\_yab01.txt
+set /p wav9=<tmp\_yab02.txt
+set /p zrw9b=<tmp\_yab03.txt
+set /p zrv9b=<tmp\_yab04.txt
+set /p cx2p=<tmp\_yab05.txt
+set /p cx1p=<tmp\_yab06.txt
+set /p cmt=<tmp\_yab07.txt
+set /p cnt=<tmp\_yab08.txt
+set /p dyt=<tmp\_yab09.txt
+set /p cx0=<tmp\_yab10.txt
+set /p cx4=<tmp\_yab11.txt
+set /p cx5=<tmp\_yab12.txt
+set /p cx8=<tmp\_yab13.txt
+set /p cx9=<tmp\_yab14.txt
+set /p pf=<tmp\_yab15.txt
+
+:frigs
+@cls&&color 01&&title YT_notify
+@bin\nircmd win show process /%pyddy%
+@bin\nircmd win move process /%pyddy% 0, 0, 2222, 1111
+@bin\nircmd win setsize process /%pyddy% 0, 0, 2222, 1111
+::@bin\nircmd win max process /%pyddy%
+@bin\nircmd win trans process /%pyddy% 166
+set cx8q=%cx8%
+set /a cx8z=%cx8q%
+@cls&&@echo '%ytnm%'---%time%,%date%>>log\YT_(%cmt%)_'%ytnm%'_(d-%dyt%)(%random%).txt
+@cls&&@echo '%ytnm%'---%time%,%date%_(%cmt%)_'%ytnm%'_(d-%dyt%)()>>log\'yt.txt
+if %cx8z%==1 (goto ptdt) else (goto trigs)
+:ptdt
+@copy /y log\YT*.txt %userprofile%\Desktop>nul 2>nul
+@cd log
+@ren YT*.txt _YT*.txt
+cd..
+
+:trigs
+@bin\nircmd win show process /%pyddy%
+@bin\nircmd win focus process /%pyddy%
+@bin\nircmd win redraw process /%pyddy%
+@bin\nircmd win settopmost process /%pyddy% 1
+
+@cls&&@color 0F
+@echo 6 >etc\_owa.ref
+if %cx2p%==0 (goto wsh2) else (goto whd2)
+:wsh2
+@bin\nircmd win show process /%pyddy%
+::@bin\nircmd win max process /%pyddy%
+
+:whd2
+set /a tc=%tc%+1
+set /a cx5z=%cx5%
+if %tc%==%cx5z% (goto rstrt)
+if %cnt%==2 (set clrf=4C)
+if %cnt%==3 (set clrf=2E)
+if %cnt%==4 (set clrf=D7)
+if %cnt%==5 (set clrf=B1)
+if %cnt%==6 (set clrf=6A)
+if %cnt%==7 (set clrf=E2)
+if %cnt%==8 (set clrf=7D)
+if %cnt%==9 (set clrf=A6)
+if %cnt%==10 (set clrf=12)
+
+set /a cx4z=%cx4%
+@bin\nircmd win focus process /%pyddy%
+@taskkill /F /IM YTnotey_rn.com>nul 2>nul
+@cls&&@color %clrf%&&@echo.&&@echo %u%
+@echo    . . . - ('%ytnm%') - . . .
+@echo %u%&&@echo.&&@echo.&&@echo.
+@echo    . . .    use tray utility
+@echo    . . .     'skip-notify'
+@echo    . . .      to continue
+@echo.&&@echo.&&@echo.
+@bin\cmdmp3 "%wav9%">nul 2>nul
+set cx0q=%cx0%
+set /a cx0p=%cx0q%
+if %cx0p%==1 (goto qrby) else (goto qext)
+:qrby
+@echo bin\YTnotey_rn.com ...\U0020%ytnm%\U0020 "LIVE - ( YTnotey )" /AlwaysOnTop /FS:11 /T:11 /BH:0 /WH:55 /WW:280 /X:%zrw9b% /Y:%zrv9b%>etc\YTnotey_t.cmd
+@util /min /hide "etc\YTnotey_t.cmd"
+:qext
+::@bin\nircmd trayballoon "LIVE" "%ytnm%" "shell32.dll,22" 2777
+@bin\YTnotey_tm.com " 'YTnotey' - ( LIVE - '%ytnm%' )" /S:137 /I:Info /V:3 /W
+@del /q "etc\YTnotey_t.cmd"
+set /a tcx2=%cx9%
+if %tcx2%==1 (goto tts2) else (goto 9tts)
+:tts2
+@bin\nircmd speak text "%ytnm%" -3 100>nul 2>nul
+:9tts
+@color %clrf%&&bin\millisleep 666&&@color 0F
+@bin\millisleep 33
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+@choice /C Z9 /D 9 /N /T 1 >nul
+if %errorlevel%==1 goto begin
+@color %clrf%&&bin\millisleep 666&&@color 0F
+@bin\millisleep 33
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+@choice /C Z9 /D 9 /N /T 1 >nul
+if %errorlevel%==1 goto begin
+@color %clrf%&&bin\millisleep 666&&@color 0F
+bin\millisleep 33
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+@choice /C Z9 /D 9 /N /T 1 >nul
+if %errorlevel%==1 goto begin
+@color %clrf%&&bin\millisleep 666&&@color 0F
+bin\millisleep 33
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+@choice /C Z9 /D 9 /N /T 1 >nul
+if %errorlevel%==1 goto begin
+@color %clrf%&&bin\millisleep 666&&@color 0F
+bin\millisleep 33
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+@cls&&color 01
+@choice /C Z9 /D 9 /N /T 1 >nul
+@cls&&color 01
+if %errorlevel%==1 goto begin
+@color %clrf%&&@bin\millisleep %pf%
+if exist "etc\dull.ref" goto rstrt
+if exist "etc\null.ref" goto eof
+goto trigs
+:begin
+@del /q etc\_ya*.ref>nul 2>nul
+exit
+:rstrt
+@del /q etc\_ya*.ref>nul 2>nul
+exit
+:eof
+@del /q etc\_ya*.ref>nul 2>nul
+exit
+:eofx
+@del /q etc\_ya*.ref>nul 2>nul
+exit

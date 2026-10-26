@@ -1,0 +1,116 @@
+@echo // urls>config.ini
+@echo url1=https://www.youtube.com/@RetroCreep>>config.ini
+@echo url2=https://www.youtube.com/@ReviewTechUSARTU>>config.ini
+@echo url3=https://www.youtube.com/@BenHeckHacks>>config.ini
+@echo url4=https://www.youtube.com/@Jayhooft>>config.ini
+@echo url5=https://www.youtube.com/@theshadyjayshow>>config.ini
+@echo url6=https://www.youtube.com/@DEEPFATFRIED>>config.ini
+@echo url7=https://www.youtube.com/@ThePaultergeist>>config.ini
+@echo _>>config.ini
+@echo .>>config.ini
+@echo. >>config.ini
+@echo // wavs>>config.ini
+@echo wav1=cuckoo.wav>>config.ini
+@echo wav2=rooster.wav>>config.ini
+@echo wav3=yeehaa.wav>>config.ini
+@echo wav4=doorbell.wav>>config.ini
+@echo wav5=drums.wav>>config.ini
+@echo wav6=sonar.wav>>config.ini
+@echo wav7=steve.wav>>config.ini
+@echo _>>config.ini
+@echo .>>config.ini
+@echo. >>config.ini
+@echo // setup>>config.ini
+@echo stp1=0 >>config.ini
+@echo.>>config.ini
+@echo // hidden-tray>>config.ini
+@echo try1=0 >>config.ini
+@echo.>>config.ini
+@echo // check-interval>>config.ini
+@echo chk1=1 >>config.ini
+@echo.>>config.ini
+@echo // notify-interval>>config.ini
+@echo not1=2 >>config.ini
+@echo.>>config.ini
+@echo // notify-total>>config.ini
+@echo ttl1=50 >>config.ini
+@echo.>>config.ini
+@echo // tuck-corner>>config.ini
+@echo tck1=1 >>config.ini
+@echo.>>config.ini
+@echo // verbose>>config.ini
+@echo vrb1=0 >>config.ini
+@echo.>>config.ini
+@echo // desktop>>config.ini
+@echo dsk1=1 >>config.ini
+@echo.>>config.ini
+@echo // speak>>config.ini
+@echo tts1=1 >>config.ini
+@echo.>>config.ini
+@echo // toast>>config.ini
+@echo tst1=1 >>config.ini
+@echo.>>config.ini
+@echo // tips>>config.ini
+@echo tps1=1 >>config.ini
+@echo.>>config.ini
+@echo // top>>config.ini
+@echo tpp1=1 >>config.ini
+@echo.>>config.ini
+@echo // urls>config-v.ini
+@echo url1=https://www.violae.net/temp/z_yt/@1>>config-v.ini
+@echo url2=https://www.violae.net/temp/z_yt/@2>>config-v.ini
+@echo url3=https://www.violae.net/temp/z_yt/@3>>config-v.ini
+@echo url4=https://www.violae.net/temp/z_yt/@4>>config-v.ini
+@echo url5=https://www.violae.net/temp/z_yt/@5>>config-v.ini
+@echo url6=https://www.violae.net/temp/z_yt/@6>>config-v.ini
+@echo url7=https://www.violae.net/temp/z_yt/@7>>config-v.ini
+@echo _>>config-v.ini
+@echo .>>config-v.ini
+@echo. >>config-v.ini
+@echo // wavs>>config-v.ini
+@echo wav1=cuckoo.wav>>config-v.ini
+@echo wav2=rooster.wav>>config-v.ini
+@echo wav3=yeehaa.wav>>config-v.ini
+@echo wav4=doorbell.wav>>config-v.ini
+@echo wav5=drums.wav>>config-v.ini
+@echo wav6=sonar.wav>>config-v.ini
+@echo wav7=steve.wav>>config-v.ini
+@echo _>>config-v.ini
+@echo .>>config-v.ini
+@echo. >>config-v.ini
+@echo // setup>>config-v.ini
+@echo stp1=0 >>config-v.ini
+@echo.>>config-v.ini
+@echo // hidden-tray>>config-v.ini
+@echo try1=0 >>config-v.ini
+@echo.>>config-v.ini
+@echo // check-interval>>config-v.ini
+@echo chk1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // notify-interval>>config-v.ini
+@echo not1=2 >>config-v.ini
+@echo.>>config-v.ini
+@echo // notify-total>>config-v.ini
+@echo ttl1=50 >>config-v.ini
+@echo.>>config-v.ini
+@echo // tuck-corner>>config-v.ini
+@echo tck1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // verbose>>config-v.ini
+@echo vrb1=0 >>config-v.ini
+@echo.>>config-v.ini
+@echo // desktop>>config-v.ini
+@echo dsk1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // speak>>config-v.ini
+@echo tts1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // toast>>config-v.ini
+@echo tst1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // tips>>config-v.ini
+@echo tps1=1 >>config-v.ini
+@echo.>>config-v.ini
+@echo // top>>config-v.ini
+@echo tpp1=1 >>config-v.ini
+@echo.>>config-v.ini
