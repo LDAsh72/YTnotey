@@ -12,11 +12,13 @@ ___________________________________________________________________
    'never miss another stream again...'
 ------------------------------------------------
 YTnotey will alert you when a new YouTube stream
-is detected on a channel. No browser, no addons,
+is detected on a channel.
+No browser, no addons,
 no late notifications - and highly configurable.
 
 Edit the INI to setup which channels to track.
  such as...
+ 
 url1=https://www.youtube.com/@RetroCreep
 
 url2=https://www.youtube.com/@ReviewTechUSARTU
