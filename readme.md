@@ -13,6 +13,7 @@ ___________________________________________________________________
 ------------------------------------------------
 YTnotey will alert you when a new YouTube stream
 is detected on a channel.
+
 No browser, no addons, no late notifications - and highly configurable.
 
 Edit the INI to setup which channels to track.
