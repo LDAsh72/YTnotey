@@ -27,6 +27,12 @@ url3=https://www.youtube.com/@BenHeckHacks
 
 url4=https://www.youtube.com/@Jayhooft
 
+url5=https://www.youtube.com/@DEEPFATFRIED
+
+url6=https://www.youtube.com/@theshadyjayshow
+
+url7=https://www.youtube.com/@ThePaultergeist
+
 ...etc.
 
 ------------------------------------------------
